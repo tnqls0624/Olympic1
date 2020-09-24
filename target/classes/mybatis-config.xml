@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+ <settings>
+		<setting name="logImpl" value="LOG4J"/>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+	<typeAliases>
+		<typeAlias type="com.tokyo.olympic.vo.UserVO" alias="UserVO" />
+		<typeAlias type="com.tokyo.olympic.vo.SeatVO" alias="SeatVO" />
+		<typeAlias type="com.tokyo.olympic.vo.TicketVO" alias="TicketVO" />
+		<typeAlias type="com.tokyo.olympic.vo.CashVO" alias="CashVO" />
+		<typeAlias type="com.tokyo.olympic.vo.PlayVO" alias="PlayVO" />
+		<typeAlias type="com.tokyo.olympic.vo.AthleteVO" alias="AthleteVO" />
+	</typeAliases>
+	<mappers>
+		<mapper resource="mapper/homeMapper.xml"/>
+		<mapper resource="mapper/MemberMapper.xml" />
+		<mapper resource="mapper/ticketMapper.xml" />
+		<mapper resource="mapper/chatMapper.xml" />
+	</mappers>
+</configuration>

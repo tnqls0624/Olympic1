@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tokyo.olympic.dao.MemberMapper">
+<insert id="signup" parameterType="UserVO" >
+INSERT INTO
+member
+(userid, userpw, username, email, tel)
+VALUES(
+#{userid}
+,#{userpw}
+,#{username}
+,#{email}
+,#{tel}
+)
+</insert>
+
+<select id="login" parameterType="UserVO"  resultType="UserVO">
+SELECT
+*
+FROM
+member
+WHERE
+userid = #{userid}
+AND
+userpw = #{userpw}
+</select>
+<select id="login1" parameterType="UserVO"  resultType="UserVO">
+SELECT
+*
+FROM
+member
+WHERE
+userid = #{userid}
+
+</select>
+
+<select id="information" parameterType="UserVO"  resultType="UserVO">
+SELECT
+*
+FROM
+member
+WHERE
+userid = #{userid}
+
+</select>
+
+
+
+
+<select id="myticket" parameterType="TicketVO"  resultType="TicketVO">
+select 
+ticket.ticketnum as ticketnum,ticket.USERID as userid, ticket.stadium as stadium , ticket.sit as sit , ticket.sitlevel as sitlevel , ticket.amount as amount ,ticket.play as play, ticket.playdate as playdate , to_char(ticket.reservationdate ,'YYYY-MM-DD') as reservationdate 
+from  
+member, ticket
+where
+ MEMBER.USERID = TICKET.USERID and member.USERID=#{userid}
+
+</select>
+
+<update id="amount" parameterType="UserVO" >
+UPDATE
+
+
+member
+SET
+pay = pay + #{pay}
+WHERE
+userid = #{userid}
+</update>
+
+<update id="amount2" parameterType="UserVO" >
+UPDATE
+
+
+member
+SET
+pay = pay - #{pay}
+WHERE
+userid = #{userid}
+</update>
+
+<update id="tiket" parameterType="UserVO" >
+UPDATE
+member
+SET
+pay = pay - #{pay} 
+WHERE
+userid = #{userid}
+</update>
+
+<update id="info" parameterType="UserVO" >
+UPDATE
+member
+SET
+userpw = #{userpw}
+,username = #{username}
+,email = #{email}
+,tel = #{tel}
+WHERE
+userid = #{userid}
+</update>
+
+<select id="loaduserinfo" parameterType="String" resultType="UserVO">
+select * from member where userid = #{userid}
+</select>
+
+<select id="ticketinfo" parameterType="String" resultType="TicketVO">
+select * from ticket where userid = #{userid}
+</select>
+
+<insert id="naverinsert" parameterType="UserVO">
+INSERT INTO
+member
+(userid,userpw,username,email,gender)
+VALUES(
+#{userid}
+,#{userpw}
+,#{username}
+,#{email}
+,#{gender}
+
+)
+</insert>
+
+<select id="naverselect" parameterType="UserVO" resultType="UserVO">
+SELECT
+*
+FROM
+member
+WHERE
+userid = #{userid}
+
+</select>
+<insert id="insertticket" parameterType="TicketVO">
+INSERT INTO
+ticket(userid , sit ,sitlevel , amount , ticketnum , play,stadium , playdate)
+VALUES(
+#{userid}
+,#{sit}
+,#{sitlevel}
+,#{amount}
+,ticket_seq.nextval
+,#{play}
+,#{stadium}
+,#{playdate}
+)
+</insert>
+
+<select id="playinffo" resultType="PlayVO">
+select * from playlist
+</select>
+
+</mapper>
