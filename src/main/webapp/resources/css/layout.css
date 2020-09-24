@@ -1,0 +1,53 @@
+/* home.html */
+#page1 header {margin-bottom:0}
+#page1 #content .padding {padding:0 12px}
+#page1 #content .col-1 {width:292px;margin-right:9px}
+#page1 #content .col-2 {width:292px}
+#page1 #content .col-3 {width:597px;margin-right:40px}
+#page1 #content {border-radius:0;-moz-border-radius:0;-webkit-border-radius:0}
+#page1 footer .col-1 {width:570px;margin-right:55px}
+#page1 footer .col-2 {width:570px;margin-right:55px}
+#page1 footer .col-3 {width:570px;margin-right:65px}
+#page1 footer .col-4 {width:570px;margin-right:65px}
+/* ticketing.html */
+#page2 #content .col-1 {width:570px;margin-right:55px}
+#page2 #content .col-2 {width:570px;margin-right:55px}
+#page2 #content .col-3 {width:570px;margin-right:55px}
+#page2 #content .col-4 {width:570px;margin-right:65px}
+#page2 #content {padding:12px 0}
+#page2 footer .col-1 {width:570px;margin-right:65px}
+#page2 footer .col-2 {width:570px;margin-right:65px}
+#page2 footer .col-3 {width:570px;margin-right:65px}
+#page2 footer .col-4 {width:570px;margin-right:65px}
+/* Mypage.html */
+#page3 #content .col-1 {width:570px;margin-right:65px}
+#page3 #content .col-2 {width:570px;margin-right:65px}
+#page3 #content .col-3 {width:570px;margin-right:65px}
+#page3 #content .col-4 {width:570px;margin-right:65px}
+#page3 #content {padding:12px 0}
+#page3 footer .col-1 {width:570px;margin-right:65px}
+#page3 footer .col-2 {width:570px;margin-right:65px}
+#page3 footer .col-3 {width:570px;margin-right:65px}
+#page3 footer .col-4 {width:570px;margin-right:65px}
+/* Broadcasting.html */
+#page4 #content .col-1 {width:570px;margin-right:65px}
+#page4 #content .col-2 {width:570px;margin-right:65px}
+#page4 #content .col-3 {width:570px;margin-right:65px}
+#page4 #content .col-4 {width:570px;margin-right:65px}
+#page4 #content {padding:12px 0}
+#page4 #content .list-2 li {padding-left:26px;background:url(../images/pic-1.gif) 0 4px no-repeat}
+#page4 footer .col-1 {width:570px;margin-right:65px}
+#page4 footer .col-2 {width:570px;margin-right:65px}
+#page4 footer .col-3 {width:570px;margin-right:65px}
+#page4 footer .col-4 {width:570px;margin-right:65px}
+/* contacts.html */
+#page5 #content .col-1 {width:570px;margin-right:65px}
+#page5 #content .col-2 {width:570px;margin-right:65px}
+#page5 #content .col-3 {width:570px;margin-right:65px}
+#page5 #content .col-4 {width:570px;margin-right:65px}
+#page5 #content {padding:12px 0}
+#page5 #content .block-news {padding:27px 33px 36px}
+#page5 footer .col-1 {width:570px;margin-right:65px}
+#page5 footer .col-2 {width:570px;margin-right:65px}
+#page5 footer .col-3 {width:570px;margin-right:65px}
+#page5 footer .col-4 {width:570px;margin-right:65px}

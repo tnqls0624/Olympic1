@@ -1,0 +1,73 @@
+create table member(
+userid varchar2(50) primary key , 
+userpw varchar2(50) not null ,
+username varchar2(50) not null,
+email varchar2(100) not null,
+tel varchar2(100),
+pay number ,
+tiket varchar2(100),
+gender varchar2(20)
+);
+
+create table ticket(
+userid varchar2(100) REFERENCES member(userid) ,
+stadium varchar2(100) ,
+sit varchar2(100) ,
+sitlevel varchar2(100) ,
+amount number ,
+ticketnum number,
+play varchar2(100), 
+playdate varchar2(100) ,
+reservationdate date default sysdate
+);
+
+CREATE TABLE SEAT
+   (	SITLEVEL VARCHAR2(10), 
+	PRICE NUMBER(10), 
+	PLAY VARCHAR2(20),
+	stadium varchar2(100)
+   );
+   
+insert into seat values('A', 20000, 'BASEBALL', '神奈川県横浜市中区横浜スタジアム');
+insert into seat values('B', 14000, 'BASEBALL', '神奈川県横浜市中区横浜スタジアム');
+insert into seat values('C', 11000, 'BASEBALL', '神奈川県横浜市中区横浜スタジアム');
+insert into seat values('D', 8000, 'BASEBALL', '神奈川県横浜市中区横浜スタジアム');
+insert into seat values('A', 16000 , 'BASKETBALL', '神奈川県横浜市中区横浜スタジアム');
+insert into seat values('B', 12000 , 'BASKETBALL', '神奈川県横浜市中区横浜スタジアム');
+insert into seat values('C', 8000 , 'BASKETBALL', '神奈川県横浜市中区横浜スタジアム');
+
+
+create SEQUENCE ticket_seq;
+
+
+CREATE TABLE PLAYLIST(
+playnum NUMBER(4) primary key,
+image varchar2(50),
+location varchar2(100),
+DATee varchar2(20),
+locationmap varchar2(50)
+);
+
+insert into playlist values(1, '/olympic/resources/images/baseb.png', '神奈川県横浜市中区横浜スタジアム', '2020年08月08日', '/olympic/member/map1');
+insert into playlist values(2, '/olympic/resources/images/basketbb.png', '青海アーバンスポーツパーク', '2020年08月08日', '/olympic/member/map2');
+
+alter table member drop column tiket;
+alter table ticket modify(playdate varchar2(40));
+
+create table athlete(
+playernum number(4) primary key,
+playnum number(4) references playlist,
+playername varchar2(20)
+);
+
+--선수데이터 등록
+Insert into HR.ATHLETE (PLAYERNUM,PLAYNUM,PLAYERNAME) values (1,2,'CARMELO ANTHONY');
+Insert into HR.ATHLETE (PLAYERNUM,PLAYNUM,PLAYERNAME) values (2,2,'LEBRON JAMES');
+Insert into HR.ATHLETE (PLAYERNUM,PLAYNUM,PLAYERNAME) values (3,2,'DAVID ROBINSON');
+Insert into HR.ATHLETE (PLAYERNUM,PLAYNUM,PLAYERNAME) values (4,2,'KEVIN DURANT');
+Insert into HR.ATHLETE (PLAYERNUM,PLAYNUM,PLAYERNAME) values (5,2,'CHRIS PAUL');
+Insert into HR.ATHLETE (PLAYERNUM,PLAYNUM,PLAYERNAME) values (6,1,'Kyoung-min Hur');
+Insert into HR.ATHLETE (PLAYERNUM,PLAYNUM,PLAYERNAME) values (7,1,'Ha-seong Kim');
+Insert into HR.ATHLETE (PLAYERNUM,PLAYNUM,PLAYERNAME) values (8,1,'Jaeho Kim');
+Insert into HR.ATHLETE (PLAYERNUM,PLAYNUM,PLAYERNAME) values (9,1,'Taekyun Kim');
+Insert into HR.ATHLETE (PLAYERNUM,PLAYNUM,PLAYERNAME) values (10,1,'Dae-Ho Lee');

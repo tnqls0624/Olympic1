@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tokyo.olympic.dao.ChatMapper">
+
+<select id="loadath" parameterType="String" resultType="AthleteVO">
+select playername as athlete from athlete where playnum = #{playnum}
+</select>
+
+</mapper>
+

@@ -1,0 +1,35 @@
+create table ticket(
+userid varchar2(100) REFERENCES member(userid) ,
+stadium varchar2(100) ,
+sit varchar2(100) ,
+sitlevel varchar2(100) ,
+amount number ,
+ticketnum number ,
+playnum varchar2(100) PRIMARY key,
+play varchar2(100) , 
+playdate date ,
+reservationdate date default sysdate,
+price number
+);
+
+create table member(
+userid varchar2(50) primary key , 
+userpw varchar2(50) not null ,
+username varchar2(50) not null,
+email varchar2(100) not null,
+tel varchar2(100) not null,
+pay number ,
+tiket varchar2(100)
+);
+
+CREATE TABLE SEAT
+   (	"SITLEVEL" VARCHAR2(10 BYTE), 
+	"PRICE" NUMBER(10,0), 
+	"PLAY" VARCHAR2(20 BYTE)
+   )
+   
+insert into seat values('A', 20000, 'BASEBALL');
+insert into seat values('B', 14000, 'BASEBALL');
+insert into seat values('C', 11000, 'BASEBALL');
+insert into seat values('D', 8000, 'BASEBALL');
+create SEQUENCE ticket_seq;

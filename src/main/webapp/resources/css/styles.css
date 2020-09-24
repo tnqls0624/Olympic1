@@ -1,0 +1,93 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+
+
+
+ 
+/* 서브메뉴 영역*/
+.gnb ul ul{display:none}
+.gnb>ul>li:hover ul {display:block; width:300px; height:50px;position:absolute; left:-58px; top:50px;}
+.gnb>ul>li:hover ul li {width:100px;float:left; height:60px;}
+.gnb li li{ height:25px;text-align:center; }
+.gnb li li a{display:block; width:100%; height:100%;  padding:20px;}
+.gnb li li a:hover{color:#111; background:none; border:none;}
+
+
+
+
+
+/*본문*/
+#contents {width:100%; padding:30px 0 100px 0;}
+#contents h1 {font-size:35px; letter-spacing:-0.1em; color:#e7121c; text-align:left; padding-bottom:20px;}
+#contents h1 > span {font-size:14px; color:#000000; padding-left:10px; letter-spacing:-0.08em;}
+
+
+
+
+
+
+
+/*로그인 및 회원가입*/
+.login_area {position:relative; width:300px; margin:20px auto; padding:20px; text-align:left; border:1px solid #000000; border-radius:20px;}
+.login_area .login_icon {position:absolute; top:-25px; left:145px; width:50px;}
+.login_area span {font-size:20px; font-weight:700;}
+
+.login_area ul { top:40px;}
+.login_area ul > li {padding:3px 0;}
+
+.login_write {width:95%;  padding:10px 0 10px 10px; font-size:13px; border:1px solid #eee;}
+.join_write {width:60%;  padfindtitle_btn tabding:10px 0 10px 10px; font-size:13px; border:1px solid #eee;}
+.id_check {display:inline-block; width:34%; height:18px; padding:9px 0 10px 0; font-size:13px; border:1px solid #d94343; background:#e7121c; text-align:center; color:black;}
+.id_check:hover {background:#c03232;}
+
+.btn_login {display:block; width:99%; padding-top:15px; height:30px; background:#d94343; text-align:center; color:#000000; font-weight:700;}
+.btn_login:hover {background:#c03232;}
+
+.btn_join {display:block; width:99%; padding-top:15px; height:30px; background:#4451a0; text-align:center; color:gray; font-weight:700;}
+.btn_join:hover {background:#2a357d;}
+
+.btn_findid {color:#2a357d;}
+.btn_findid:hover {text-decoration:underline;}
+
+.btn_idfind {display:block; width:99%; padding-top:15px; height:30px; background:#000000; text-align:center; color:#000000; font-weight:700;}
+
+.findtitle_btn {display:inline-block; width:48.2%; height:60000px; border:1px solid #eee; padding-top:13px; border-radius:15px 15px 0 0; text-align:center; background:black;}
+.findtitle_btn:hover , a.tab {background:#000000; color:#000000; font-weight:700; border:1px solid #52d148;}
+
+.grp_area {height:25px; margin-top:10px; text-align:left;}
+.grp_area label {padding:10px;font-size:13px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*팝업*/
+
+
+
+
+.popwrap h2 {  width:100%; height:40px; background:#e7121c; margin-bottom:25px; padding-top:20px; color:#fff;}
+.popwrap span {font-weight:700; font-size:15px; color:#e7121c;}
+.popwrap p.list_btn {margin-top:20px;}
+.popwrap p.list_btn a {padding:10px 20px; margin:0 3px; border:2px solid #eee; border-radius:20px;}
+.popwrap p.list_btn a:hover, .popwrap p.list_btn a.select {border:2px solid #e7121c; background:#e7121c; color:#fff; font-weight:700;}
+
+.wr_idcheck {border:2px solid #eee; height:30px; width:120px; border-radius:20px; padding-left:10px;}
+
+
+.popwrap table {width:90%; margin:0 auto; border:1px solid #eee;}
+.popwrap table th, .popwrap table td {padding:10px; border-bottom:1px solid #eee;}
+.popwrap table th {background:#eee;}
+
+
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tokyo.olympic.dao.TicketMapper">
+<select id="getseatprice" resultType="SeatVO">
+select * from seat where sitlevel = #{sitlevel} and play = #{play}
+</select>
+
+<insert id="refund" parameterType="CashVO">
+insert into
+Cash
+Values(
+#{imp_uid}
+,#{merchant_uid}
+,#{paid_amount}
+,#{applynum}
+)
+</insert>
+
+<select id="searchseat" resultType="TicketVO">
+select sit, sitlevel, play from ticket
+</select>
+
+</mapper>
